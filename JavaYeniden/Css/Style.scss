@@ -1,0 +1,52 @@
+#slider{
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+    #btnleft,
+    #btnright{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+    }
+    #btnleft{
+        left: 25px;
+    }
+    #btnright{
+        right: 25px;
+    }
+
+
+    .slider-item{
+        height: 80vh;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        width: 100%;
+        visibility: hidden;
+        opacity: 0;
+        transition: .3s;
+        transform: scale(3);
+        &.active{
+            visibility: visible;
+            opacity: 1;
+            left: 0;
+            transition: .4s;
+            transform: scale(1);
+
+        }
+        &:nth-child(1){
+            background: url(../image/blog-post-1.jpg) no-repeat center center /cover;
+        }
+        &:nth-child(2){
+            background: url(../image/blog-post-2.jpg) no-repeat center center /cover;
+        }
+        &:nth-child(3){
+            background: url(../image/blog-post-3.jpg) no-repeat center center /cover;
+        }
+        &:nth-child(4){
+            background: url(../image/blog-post-big.jpg) no-repeat center center /cover;
+        }
+        
+    }
+}

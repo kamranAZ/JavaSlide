@@ -1,0 +1,62 @@
+#slider {
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+}
+
+#slider #btnleft,
+#slider #btnright {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#slider #btnleft {
+  left: 25px;
+}
+
+#slider #btnright {
+  right: 25px;
+}
+
+#slider .slider-item {
+  height: 80vh;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+  -webkit-transform: scale(3);
+          transform: scale(3);
+}
+
+#slider .slider-item.active {
+  visibility: visible;
+  opacity: 1;
+  left: 0;
+  -webkit-transition: .4s;
+  transition: .4s;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+#slider .slider-item:nth-child(1) {
+  background: url(../image/blog-post-1.jpg) no-repeat center center/cover;
+}
+
+#slider .slider-item:nth-child(2) {
+  background: url(../image/blog-post-2.jpg) no-repeat center center/cover;
+}
+
+#slider .slider-item:nth-child(3) {
+  background: url(../image/blog-post-3.jpg) no-repeat center center/cover;
+}
+
+#slider .slider-item:nth-child(4) {
+  background: url(../image/blog-post-big.jpg) no-repeat center center/cover;
+}
+/*# sourceMappingURL=Style.css.map */
